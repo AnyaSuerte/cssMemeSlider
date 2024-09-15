@@ -4,7 +4,9 @@
 body {
   overflow: hidden;
 }
-
+img {
+  display: block;
+}
 .main-section {
   display: flex;
   justify-content: center;
@@ -24,13 +26,20 @@ body {
 
 .slides {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.8s ease-in-out;
 }
 
 .slide {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   min-width: 100%;
-  transition: opacity 0.5s ease-in-out;
-  position: relative;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
 }
 
 .slide img {
@@ -40,32 +49,29 @@ body {
   border-radius: 10px;
 }
 
-/* Caption styling */
 .caption {
-  position: absolute;
-  bottom: 10px;
-  left: 20px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px;
-  border-radius: 5px;
   font-size: 16px;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in-out, transform 0.8s ease-in-out;
 }
 
-/* Dots styling */
+.caption.animate-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .dots {
   display: flex;
-  justify-content: center;
-  position: absolute;
+  justify-content: right;
   bottom: 10px;
   width: 100%;
 }
 
 .dot {
-  height: 10px;
-  width: 10px;
+  height: 15px;
+  width: 15px;
   margin: 0 5px;
   background-color: #bbb;
   border-radius: 50%;
@@ -75,10 +81,5 @@ body {
 }
 
 .dot.active {
-  background-color: #3c9;
-}
-
-/* Active slide caption visibility */
-.slide.active .caption {
-  opacity: 1;
+  background-color: rgb(51, 122, 204);
 }

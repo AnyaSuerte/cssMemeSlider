@@ -5,35 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Meme Slider</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
   </head>
-  <main class="main-section container">
-    <div class="slider wrapper">
-      <div class="slides">
-        <div class="slide active">
-          <img src="./img/icon-1.jpg" alt="Cats" />
-          <div class="caption">Админ, вставай! Мы там все серверы уронили! Админ!</div>
+  <body>
+    <main class="main-section container">
+      <div class="slider wrapper">
+        <div class="slides">
+          <div class="slide">
+            <img src="./img/icon-1.jpg" alt="Cats" />
+            <p class="caption">
+              Админ, вставай! Мы там все серверы уронили! Админ!
+            </p>
+          </div>
+          <div class="slide">
+            <img src="./img/icon-2.jpg" alt="Dog-beauty" />
+            <p class="caption">
+              Как она смотрит на меня после 3-х часов макияжа!
+            </p>
+          </div>
+          <div class="slide">
+            <img src="./img/icon-3.jpg" alt="September-3rd" />
+            <p class="caption">
+              Нет времени объяснять, просто переверни календарь!
+            </p>
+          </div>
+          <div class="slide">
+            <img src="./img/icon-4.jpg" alt="Trash" />
+            <p class="caption">Сколько мусора! Сейчас исправим!!</p>
+          </div>
         </div>
-        <div class="slide">
-          <img src="./img/icon-2.jpg" alt="Dog-beauty" />
-          <div class="caption">Как она смотрит на меня после 3-х часов макияжа!</div>
-        </div>
-        <div class="slide">
-          <img src="./img/icon-3.jpg" alt="September-3rd" />
-          <div class="caption">Нет времени объяснять, просто переверни календарь!</div>
-        </div>
-        <div class="slide">
-          <img src="./img/icon-4.jpg" alt="Trash" />
-          <div class="caption">Сколько мусора! Сейчас исправим!!</div>
+        <div class="dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+          <span class="dot" data-index="3"></span>
         </div>
       </div>
-      <div class="dots">
-        <span class="dot active" data-index="0"></span>
-        <span class="dot" data-index="1"></span>
-        <span class="dot" data-index="2"></span>
-        <span class="dot" data-index="3"></span>
-      </div>
-    </div>
-  </main>
-  <script src="./js/main.js"></script>
-</body>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
