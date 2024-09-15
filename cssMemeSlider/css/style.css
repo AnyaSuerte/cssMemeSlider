@@ -14,12 +14,16 @@ img {
   min-height: 100vh;
   background-color: #333;
 }
-
+.container {
+  width: 1280px;
+}
 .wrapper {
   width: 80%;
-  max-width: 1000px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.slider {
+  position: relative;
 }
 
 .slides {
@@ -35,7 +39,6 @@ img {
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
   gap: 30px;
-  position: relative;
 }
 
 .slide.active {
@@ -54,10 +57,11 @@ img {
   font-family: Arial;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1.5s ease-in-out, transform 0.8s ease-in-out;
+  margin-bottom: 20px;
 }
 
 .caption.animate-caption {
@@ -67,13 +71,14 @@ img {
 
 .dots {
   position: absolute;
-  bottom: 27px;
-  left: 80%;
+  bottom: 2.5%;
+  left: 87.5%;
+  width: 100%;
 }
 
 .dot {
-  height: 15px;
-  width: 15px;
+  height: 1rem;
+  width: 1rem;
   margin: 0 5px;
   border: rgb(51, 122, 204) solid;
   border-radius: 50%;
@@ -88,4 +93,22 @@ img {
 .slide-wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 320px;
+  }
+  .caption {
+    font-size: 0.55rem;
+  }
+  .dot {
+    height: 0.55rem;
+    width: 0.55rem;
+    margin: 0 2px;
+  }
+  .dots {
+    bottom: 25%;
+    left: 37%;
+  }
 }
